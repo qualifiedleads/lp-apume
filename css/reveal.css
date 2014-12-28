@@ -1,0 +1,106 @@
+/*	--------------------------------------------------
+	Reveal Modals
+	-------------------------------------------------- */
+		
+	.reveal-modal-bg { 
+		position: fixed; 
+		height: 100%;
+		width: 100%;
+		background: #000;
+		background: rgba(0,0,0,.8);
+		z-index: 100;
+		display: none;
+		top: 0;
+		left: 0; 
+		}
+	
+	.reveal-modal {
+		visibility: hidden;
+		top: 100px; 
+		left: 50%;
+		margin-left: -300px;
+		width: 520px;
+		background: #fff;
+		position: absolute;
+		z-index: 101;
+		padding: 20px;
+		border: 10px solid #FFC600;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+		-moz-box-shadow: 0 0 10px rgba(0,0,0,.4);
+		-webkit-box-shadow: 0 0 10px rgba(0,0,0,.4);
+		-box-shadow: 0 0 10px rgba(0,0,0,.4);
+		text-align:center;
+	}
+		
+	.reveal-modal.small 		{ width: 200px; margin-left: -140px;}
+	.reveal-modal.medium 		{ width: 400px; margin-left: -240px;}
+	.reveal-modal.large 		{ width: 600px; margin-left: -340px;}
+	.reveal-modal.xlarge 		{ width: 800px; margin-left: -440px;}
+	
+	.reveal-modal .close-reveal-modal {
+		font-size: 22px;
+		line-height: .5;
+		position: absolute;
+		top: 8px;
+		right: 11px;
+		color: #aaa;
+		text-shadow: 0 -1px 1px rbga(0,0,0,.6);
+		font-weight: bold;
+		cursor: pointer;
+	} 
+		
+	.reveal-modal h3{
+		font-size: 28px;
+		font-weight: 600;
+		line-height: 30px;
+		padding: 10px;
+		overflow: hidden;
+		text-align:center;	
+		color:#555;
+	}
+	.email_form{
+		margin:16px 0;
+	}
+	.email_form .email_input{
+		/*line-height: 30px;
+		margin: 10px;
+		padding:4px;
+		font-size:18px;
+		display:block;*/
+		background-color: #fff;
+		font-size: 14px;
+		padding: 5px 15px;
+		border: 0;
+		margin-bottom: 16px;
+		box-shadow: inset 0 0px 2px rgba(0, 0, 0, 0.3);
+		-moz-box-shadow: inset 0 0px 2px rgba(0, 0, 0, 0.3);
+		-webkit-box-shadow: inset 0 0px 2px rgba(0, 0, 0, 0.3);
+		border-radius: 4px;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		line-height: 30px;
+	}
+	.email_form .btn{
+		border-radius: 4px;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		background: #ffc600;
+		color: #fcfcfc;
+		font-family: 'Open Sans Condensed', sans-serif;
+		font-size: 15px;
+		font-weight: 600;
+		cursor: pointer;
+		-webkit-appearance: none;
+		line-height: 30px;
+		margin: 0 auto;
+		padding: 5px 15px;
+		text-decoration: none;
+		overflow: hidden;
+		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+		border: 0;
+	}
+	.email_form .btn:hover {
+    	background-color: #059edd;
+	}

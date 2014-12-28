@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="css/reveal.css" type="text/css" media="all"/>
+<!--<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>-->
+<script src="http://code.jquery.com/jquery-1.6.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<script src="js/jquery.reveal.js" type="text/javascript"></script>
+<script src="js/html5shiv.js" type="text/javascript"></script>
+<script src="js/functions.js" type="text/javascript"></script>
+<script type="text/javascript">
+		$(document).ready(function() {
+			// jQuery Validation
+			$("#signup").validate({
+				// if valid, post data via AJAX
+				submitHandler: function(form) {
+					$.post("subscribe.php", { email: $("#email").val() }, function(data) {
+						$('.emailModal_box').html(data);
+					});
+				},
+				// all fields are required
+				rules: {
+					email: {
+						required: true,
+						email: true
+					}
+				}
+			});
+		});
+	</script>
+
+</head>
+<body>
+<!-- background image --> 
+<img id="bgimg" src="img/2.jpg" alt="" class="bg" data-lead-id="background-img" /> 
+<!-- wrapper -->
+<section id="wrapper">
+  <section class="content-box type2"> 
+    <!-- logo --> 
+    <a id="logo" class="lead-logo" href=""><img border="0" src="img/logo.png" alt="logo"/></a> 
+    <!-- box -->
+    <section id="content-box" class="blackbox">
+      <h3 id="primary-headline"> "New Book Reveals . . . 21 Secrets to Happiness
+        (learn to Harness their Power ) and Prosper in an ever changing world" </h3>
+      <p id="primary-subheadline">Enter your email address by clicking below</p>
+      <a id="optin-button" href="#" data-reveal-id="emailModal">Request Access</a>
+      <p id="subtext"><strong>Privacy Policy:</strong> We hate SPAM and promise to keep <br />
+        your email address safe.</p>
+    </section>
+    <!-- footer -->
+    <footer id="footer" class="footer">
+      <p>Copyright 2014 &copy; All Rights Reserved</p>
+    </footer>
+  </section>
+</section>
+<div id="emailModal" class="reveal-modal">
+  	<div class="emailModal_box">
+        <h3 class="emailModal_title">Enter your email address below to reserve your report...it's 100% FREE!</h3>
+        <form class="email_form" method="post" action="subscribe.php" id="signup">
+          <input type="email" placeholder="Enter email" name="email" autocomplete="off" class="email_input" id="email">
+          <input type="submit" data-style="zoom-in" value="Get it Now!" class="btn">
+        </form>
+        <span class="signup_note">Privacy Policy: We hate SPAM and promise to keep your email address safe.</span> 
+	</div>
+  	<a class="close-reveal-modal">&#215;</a> 
+</div>
+</body>
+</html>
