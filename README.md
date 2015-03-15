@@ -1,4 +1,4 @@
 lp-apume
 ========
 
-lander
+the live lander is hosted on OpenShift
