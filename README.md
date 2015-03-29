@@ -1,4 +1,4 @@
 lp-apume
 ========
-http://qualifiedleadsgithub.io/lp-apume
+http://qualifiedleads.github.io/lp-apume
 lander
